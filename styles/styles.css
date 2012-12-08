@@ -1,0 +1,44 @@
+body {
+	background: #000;
+	padding: 10px 30px;
+	font-family: Helvetica, sans-serif;
+}
+
+.content {
+	display: -moz-box;
+	display: -webkit-box;
+	display: -ms-box;
+	display: box;
+	margin-top: 22px;
+	padding-right: 30px;
+	white-space: nowrap;
+}
+
+.content article {
+	white-space: nowrap;
+	display: inline-block;
+	vertical-align: top;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.content article { display: block; }
+}
+
+.content article div {
+	display: inline-block;
+	vertical-align: top;
+	white-space: normal;
+}
+
+section {
+    transition: background-color 0.7s linear;
+    -moz-transition: background-color 0.7s linear;
+    -o-transition: background-color 0.7s linear;
+    -webkit-transition: background-color 0.7s linear;
+
+    padding: 5px;
+}
+
+section.highlight {
+    background-color: #ddd;
+}

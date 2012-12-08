@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Orchard Cheatsheet</title>
+
+		<!--[if lt IE 9]>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<meta name="author" content="Sebastien Ros - http://sebastienros.com">
+		<meta name="title" content="Orchard Cheatsheet">
+		<meta name="description" content="Orchard Cheatsheet">
+		<meta name="keywords" content="Orchard, api, cheatsheet">
+
+		<!-- Css -->
+		<link rel="stylesheet" href="styles/styles.css" type="text/css">
+		<link rel="stylesheet" href="styles/jquery.css" type="text/css">
+	</head>
+
+	<body>
+		<header>
+		</header>
+			
+<!-- 
+
+.hint
+.params
+.type
+
+<article>                                       <article>
+    <div>               <div>                       ...
+        <section>           <section>
+            <ul/li>                <ul/li>
+        <section>           <section>
+            <ul/li>                <ul/li>
+
+					<section>
+						<h2></h2>
+						<ul>
+							<li><a class="v1-6" title="" href="#">*</a></li>
+							<li><a class="v1-6" title="" href="#">*</a></li>
+							<li><a class="v1-6" title="" href="#">*</a></li>
+							<li><a class="v1-6" title="" href="#">*</a></li>
+						</ul>
+					</section>
+-->
+
+		<div class="content">
+			<article id="views">
+				<h1>Views</h1>
+
+				<div>
+					<section>
+						<h2>Global Members</h2>
+						<ul>
+							<li><a class="v1-6" title="The 'Layout' shape representing the main template of the theme." href="#">Layout<span class="type">dynamic(Shape)</span></a></li>
+							<li><a class="v1-6" title="A function returning the localized version of a string." href="#">T<span class="params">(string)</span><span class="type">LocalizedString</span></a></li>
+							<li><a class="v1-6" title="Renders a Shape." href="#">Display<span class="params">(dynamic)</span><span class="type">IHtmlString</span></a></li>
+							<li><a class="v1-6" title="Renders the children of a Shape." href="#">DisplayChildren<span class="params">(dynamic)</span><span class="type">IHtmlString</span></a></li>
+							<li><a class="v1-6" title="The 'WorkContext' object representing the current unit of work." href="#workcontext" data-highlight="#workcontext">WorkContext<span class="type">WorkContext</span></a></li>
+							<li><a class="v1-6" title="A shape factory." href="#" data-highlight="#ishapefactory">New<span class="type">IShapeFactory</span></a></li>
+						</ul>
+					</section>
+
+					<section id="workcontext">
+						<h2>WorkContext</h2>
+						<ul>
+							<li><a class="v1-6" title="Returns a specific service." href="#">Resolve<span class="params">&lt;T&gt;()</span><span class="type">T</span></a></li>
+							<li><a class="v1-6" title="Resolves a specific service and returns 'true' if successful." href="#">TryResolve<span class="params">&lt;T&gt;(out T)</span><span class="type">bool</span></a></li>
+							<li><a class="v1-6" title="Returns the value of the specific named element in the current unit of work." href="#">GetState<span class="params">&lt;T&gt;(string)</span><span class="type">T</span></a></li>
+							<li><a class="v1-6" title="The current 'HttpContext'." href="#">HttpContext<span class="type">HttpContextBase</span></a></li>
+							<li><a class="v1-6" title="The 'ISite' the current request is running in." href="#" data-highlight="#isite">CurrentSite<span class="type">ISite</span></a></li>
+							<li><a class="v1-6" title="The 'IUser' instance representing the authenticated user, or 'null' if the user is anonymous." href="#" data-highlight="#iuser">CurrentUser<span class="type">IUser</span></a></li>
+							<li><a class="v1-6" title="The theme module which is used to render the current request." href="#" data-highlight="#extensiondescriptor">CurrentTheme<span class="type">ExtensionDescriptor</span></a></li>
+							<li><a class="v1-6" title="The culture which is used to render the current request." href="#">CurrentCulture<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="The time zone which is used to render the current request." href="#">CurrentTimeZone<span class="type">System.TimeZoneInfo</span></a></li>
+						</ul>
+					</section>
+				</div>
+				<div>
+                    <section id="shape">
+						<h2>Shape</h2>
+						<ul>
+							<li><a class="v1-6" title="Gets or sets the HTML id to use when the shape is rendered." href="#">Id<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="Defines the HTML id to use when the shape is rendered." href="#">Id<span class="params">(string)</span><span class="type">string</span></a></li>
+							<li><a class="v1-6" title="Gets or sets the HTML classes to use when the shape is rendered." href="#">Classes<span class="type">IList&lt;string&gt;</span></a></li>
+							<li><a class="v1-6" title="Adds a value to the HTML classes to use when the shape is rendered." href="#">Classes<span class="params">(string)</span><span class="type">string</span></a></li>
+							<li><a class="v1-6" title="Gets or sets the HTML attributes to use when the shape is rendered." href="#">Attributes<span class="type">IDictionary&lt;string, string&gt;</span></a></li>
+							<li><a class="v1-6" title="Adds a value to the HTML attributes to use when the shape is rendered." href="#">Attributes<span class="params">(string)</span><span class="type">string</span></a></li>
+							<li><a class="v1-6" title="Gets the children of the shape." href="#">Items<span class="type">IEnumerable&lt;dynamic&gt;</span></a></li>
+							<li><a class="v1-6" title="Adds a child to the shape at the given position." href="#">Add<span class="params">(object, [string])</span><span class="type">dynamic(Shape)</span></a></li>
+							<li><a class="v1-6" title="Adds a some children to the shape at the given position." href="#">AddRange<span class="params">(IEnumerable&lt;object&gt;, [string])</span><span class="type">dynamic(Shape)</span></a></li>
+							<li><a class="v1-6" title="Gets the metadata of the shape." href="#" data-highlight="#shapemetadata">ShapeMetadata<span class="type">ShapeMetadata</span></a></li>
+						</ul>
+					</section>
+
+                    <section id="shapemetadata">
+						<h2>ShapeMetadata</h2>
+						<ul>
+							<li><a class="v1-6" title="Returns the type of the shape, e.g. 'Price'." href="#">Type<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="Returns the display type of the shape. If none then 'Detail' will be used." href="#">DisplayType<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="Returns the position of the shape." href="#">Position<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="The wrappers of the shape." href="#">Wrappers<span class="type">IList&lt;string&gt;</span></a></li>
+							<li><a class="v1-6" title="The alternates of the shape." href="#">Alternates<span class="type">IList&lt;string&gt;</span></a></li>
+							<li><a class="v1-6" title="The content rendered by children of the shape." href="#">ChildContent<span class="type">IHtmlString</span></a></li>
+						</ul>
+					</section>
+
+                    <section id="ishapefactory">
+						<h2>ISite</h2>
+						<ul>
+							<li><a class="v1-6" title="A method call creates a new shape whose type is the name of the method." href="#">Price<span class="params">()</span><span class="type">dynamic(Shape)</span></a></li>
+							<li><a class="v1-6" title="Named parameters assign properties on the new shape." href="#">Price<span class="params">(Currency: &quot;$&quot;, Value: 42)</span><span class="type">dynamic(Shape)</span></a></li>
+							<li><a class="v1-6" title="Further method call assign properties on the new shape." href="#">Price<span class="params">()</span>.Currency<span class="params">(&quot;$&quot;)</span>.Value<span class="params">(42)</span><span class="type">dynamic(Shape)</span></a></li>
+						</ul>
+					</section>
+
+                    <section id="isite">
+						<h2>ISite</h2>
+						<ul>
+							<li><a class="v1-6" title="The name of the current tenant." href="#">SiteName<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="The base url of the current tenant." href="#">BaseUrl<span class="type">string</span></a></li>
+						</ul>
+					</section>
+
+                    <section id="iuser">
+						<h2>IUser</h2>
+						<ul>
+							<li><a class="v1-6" title="The name of the user." href="#">UserName<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="The email of the user." href="#">Email<span class="type">string</span></a></li>
+						</ul>
+					</section>
+
+                    <section id="extensiondescriptor">
+						<h2>ExtensionDescriptor</h2>
+						<ul>
+							<li><a class="v1-6" title="The identifier of the theme, e.g. TheThemeMachine." href="#">Id<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="The path of the theme." href="#">Path<span class="type">string</span></a></li>
+						</ul>
+					</section>
+				</div>
+			</article>
+            
+            <article id="helpers">
+				<h1>Helpers</h1>
+
+				<div>
+					<section>
+						<h2>Html</h2>
+						<ul>
+							<li><a class="v1-6" title="" href="#">Title<span class="params">(params string[])</span><span class="type">IHtmlString</span></a></li>
+							<li><a class="v1-6" title="" href="#">AddTitleParts<span class="params">(params string[])</span><span class="type"></span></a></li>
+							<li><a class="v1-6" title="" href="#">AppendTitleParts<span class="params">(params string[])</span><span class="type"></span></a></li>
+							<li><a class="v1-6" title="" href="#">AddPageClassNames<span class="params">(params string[])</span><span class="type"></span></a></li>
+							<li><a class="v1-6" title="" href="#">ClassForPage<span class="params">(params string[])</span><span class="type">IHtmlString</span></a></li>
+							<li><a class="v1-6" title="Returns the text representing a content item." href="#">ItemDisplayText<span class="params">(IContent)</span><span class="type">IHtmlString</span></a></li>
+							<li><a class="v1-6" title="Returns a link to the view of a content item." href="#">ItemDisplayLink<span class="params">(IContent)</span><span class="type">IHtmlString</span></a></li>
+							<li><a class="v1-6" title="Returns a link to the view of a content item using some custom text." href="#">ItemDisplayLink<span class="params">(string, IContent)</span><span class="type">IHtmlString</span></a></li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Url</h2>
+						<ul>
+							<li><a class="v1-6" title="Returns the url to access a content item." href="#">ItemDisplayUrl<span class="params">(IContent)</span><span class="type">IHtmlString</span></a></li>
+						</ul>
+					</section>
+					
+				</div>
+			</article>
+		</div>
+
+        	<!-- Javascript -->
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js" type="text/javascript"></script>
+		<script src="scripts/scripts.js" type="text/javascript"></script>
+
+	</body>
+</html>
