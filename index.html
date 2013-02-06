@@ -103,7 +103,7 @@
 					</section>
 				</div>
 				<div>
-                    <section id="shape">
+          <section id="shape">
 						<h2>Shape</h2>
 						<ul>
 							<li><a class="v1-6" title="Gets or sets the HTML id to use when the shape is rendered." href="#">Id<span class="type">string</span></a></li>
@@ -119,7 +119,7 @@
 						</ul>
 					</section>
 
-                    <section id="shapemetadata">
+          <section id="shapemetadata">
 						<h2>ShapeMetadata</h2>
 						<ul>
 							<li><a class="v1-6" title="Returns the type of the shape, e.g. 'Price'." href="#">Type<span class="type">string</span></a></li>
@@ -131,7 +131,7 @@
 						</ul>
 					</section>
 
-                    <section id="ishapefactory">
+          <section id="ishapefactory">
 						<h2>IShapeFactory</h2>
 						<ul>
 							<li><a class="v1-6" title="A method call creates a new shape whose type is the name of the method." href="#">Price<span class="params">()</span><span class="type">dynamic(Shape)</span></a></li>
@@ -141,7 +141,7 @@
 						</ul>
 					</section>
 
-                    <section id="isite">
+          <section id="isite">
 						<h2>ISite</h2>
 						<ul>
 							<li><a class="v1-6" title="The name of the current tenant." href="#">SiteName<span class="type">string</span></a></li>
@@ -149,7 +149,7 @@
 						</ul>
 					</section>
 
-                    <section id="iuser">
+          <section id="iuser">
 						<h2>IUser</h2>
 						<ul>
 							<li><a class="v1-6" title="The name of the user." href="#">UserName<span class="type">string</span></a></li>
@@ -157,7 +157,7 @@
 						</ul>
 					</section>
 
-                    <section id="extensiondescriptor">
+          <section id="extensiondescriptor">
 						<h2>ExtensionDescriptor</h2>
 						<ul>
 							<li><a class="v1-6" title="The identifier of the theme, e.g. TheThemeMachine." href="#">Id<span class="type">string</span></a></li>
@@ -178,6 +178,73 @@
 							<li><a class="v1-6" title="The selected content items." href="#">ContentItems<span class="type">IEnumerable&lt;ContentItem&gt;</span></a></li>
 						</ul>
 					</section>
+					<section>
+						<h2>Boolean Field</h2>
+						<ul>
+							<li><a class="v1-6" title="The value of the field." href="#">Value<span class="type">bool?</span></a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Date & Time Field</h2>
+						<ul>
+							<li><a class="v1-6" title="The value of the field." href="#">DateTime<span class="type">DateTime</span></a></li>
+						</ul>
+						<h3>Shape properties</h3>
+						<ul>
+							<li><a class="v1-6" title="The local value of the date only, e.g. &quot;6/15/2009&quot;." href="#">Date<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="The local value of the time only, , e.g. &quot;1:45 PM&quot;." href="#">Time<span class="type">string</span></a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Enumeration Field</h2>
+						<ul>
+							<li><a class="v1-6" title="The comma separated value of the field." href="#">Value<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="The selected values." href="#">SelectedValues<span class="type">string[]</span></a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Input Field</h2>
+						<ul>
+							<li><a class="v1-6" title="The value of the field." href="#">Value<span class="type">string</span></a></li>
+						</ul>
+					</section>				
+					<section>
+						<h2>Link Field</h2>
+						<ul>
+							<li><a class="v1-6" title="The url property of the field." href="#">Value<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="The text property of the field." href="#">Text<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="The target property of the field." href="#">Target<span class="type">string</span></a></li>
+						</ul>
+					</section>				
+					<section>
+						<h2>Link Field</h2>
+						<ul>
+							<li><a class="v1-7" title="The Json representation of the selected media items." href="#">SelectedItems<span class="type">string</span></a></li>
+							<li><a class="v1-7" title="The list of selected media items." href="#" data-highlight="#media">Items<span class="type">IEnumerable&lt;MediaGalleryItem&gt;</span></a></li>
+						</ul>
+					</section>
+					<section id="media">
+						<h2>Media Picker Field</h2>
+						<ul>
+						<ul>
+							<li><a class="v1-6" title="The Url of the media item." href="#">Url<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="The alternate text of the media item." href="#">AlternateText<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="The Css class of the media item." href="#">Class<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="The Css style of the media item." href="#">Style<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="The alignment of the media item." href="#">Alignment<span class="type">string</span></a></li>
+							<li><a class="v1-6" title="The widht of the media item." href="#">Width<span class="type">int</span></a></li>
+							<li><a class="v1-6" title="The height of the media item." href="#">Height<span class="type">int</span></a></li>
+						</ul>
+						</ul>
+					</section>
+					<section>
+						<h2>Numeric Field</h2>
+						<ul>
+						<ul>
+							<li><a class="v1-" title="The value of the field." href="#">Value<span class="type">decimal?</span></a></li>
+						</ul>
+						</ul>
+					</section>					
 				</div>
 			</article>
 			
