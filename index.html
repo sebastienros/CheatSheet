@@ -81,6 +81,26 @@
 							<li><a class="v1-6" title="The time zone which is used to render the current request." href="#">CurrentTimeZone<span class="type">System.TimeZoneInfo</span></a></li>
 						</ul>
 					</section>
+					<section>
+						<h2>Html</h2>
+						<ul>
+							<li><a class="v1-6" title="" href="#">Title<span class="params">(params string[])</span><span class="type">IHtmlString</span></a></li>
+							<li><a class="v1-6" title="" href="#">AddTitleParts<span class="params">(params string[])</span><span class="type"></span></a></li>
+							<li><a class="v1-6" title="" href="#">AppendTitleParts<span class="params">(params string[])</span><span class="type"></span></a></li>
+							<li><a class="v1-6" title="" href="#">AddPageClassNames<span class="params">(params string[])</span><span class="type"></span></a></li>
+							<li><a class="v1-6" title="" href="#">ClassForPage<span class="params">(params string[])</span><span class="type">IHtmlString</span></a></li>
+							<li><a class="v1-6" title="Returns the text representing a content item." href="#">ItemDisplayText<span class="params">(IContent)</span><span class="type">IHtmlString</span></a></li>
+							<li><a class="v1-6" title="Returns a link to the view of a content item." href="#">ItemDisplayLink<span class="params">(IContent)</span><span class="type">IHtmlString</span></a></li>
+							<li><a class="v1-6" title="Returns a link to the view of a content item using some custom text." href="#">ItemDisplayLink<span class="params">(string, IContent)</span><span class="type">IHtmlString</span></a></li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Url</h2>
+						<ul>
+							<li><a class="v1-6" title="Returns the url to access a content item." href="#">ItemDisplayUrl<span class="params">(IContent)</span><span class="type">IHtmlString</span></a></li>
+						</ul>
+					</section>
 				</div>
 				<div>
                     <section id="shape">
@@ -146,34 +166,21 @@
 					</section>
 				</div>
 			</article>
-            
-            <article id="helpers">
-				<h1>Helpers</h1>
+           
+			<article id="fields">
+				<h1>Fields</h1>
 
 				<div>
 					<section>
-						<h2>Html</h2>
+						<h2>Content Picker Field</h2>
 						<ul>
-							<li><a class="v1-6" title="" href="#">Title<span class="params">(params string[])</span><span class="type">IHtmlString</span></a></li>
-							<li><a class="v1-6" title="" href="#">AddTitleParts<span class="params">(params string[])</span><span class="type"></span></a></li>
-							<li><a class="v1-6" title="" href="#">AppendTitleParts<span class="params">(params string[])</span><span class="type"></span></a></li>
-							<li><a class="v1-6" title="" href="#">AddPageClassNames<span class="params">(params string[])</span><span class="type"></span></a></li>
-							<li><a class="v1-6" title="" href="#">ClassForPage<span class="params">(params string[])</span><span class="type">IHtmlString</span></a></li>
-							<li><a class="v1-6" title="Returns the text representing a content item." href="#">ItemDisplayText<span class="params">(IContent)</span><span class="type">IHtmlString</span></a></li>
-							<li><a class="v1-6" title="Returns a link to the view of a content item." href="#">ItemDisplayLink<span class="params">(IContent)</span><span class="type">IHtmlString</span></a></li>
-							<li><a class="v1-6" title="Returns a link to the view of a content item using some custom text." href="#">ItemDisplayLink<span class="params">(string, IContent)</span><span class="type">IHtmlString</span></a></li>
+							<li><a class="v1-6" title="The identifiers of the selected content items." href="#">Ids<span class="type">int[]</span></a></li>
+							<li><a class="v1-6" title="The selected content items." href="#">ContentItems<span class="type">IEnumerable&lt;ContentItem&gt;</span></a></li>
 						</ul>
 					</section>
-
-					<section>
-						<h2>Url</h2>
-						<ul>
-							<li><a class="v1-6" title="Returns the url to access a content item." href="#">ItemDisplayUrl<span class="params">(IContent)</span><span class="type">IHtmlString</span></a></li>
-						</ul>
-					</section>
-					
 				</div>
 			</article>
+			
 		</div>
 
         	<!-- Javascript -->
